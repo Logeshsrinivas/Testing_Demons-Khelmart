@@ -8,7 +8,7 @@ public class RegisterLocators {
 	public WebElement account;
 	@FindBy(xpath="//a[text()=' My account']")
 	public WebElement myAccount;
-	@FindBy(xpath="//div[@class='block block-new-customer']/div/div/div/a[@class='action create primary']")
+	@FindBy(xpath="(//span[text()='Create an Account'])[1]")
 	public WebElement newCustomer;
 	@FindBy(id="firstname")
 	public WebElement firstname;
@@ -20,7 +20,8 @@ public class RegisterLocators {
 	public WebElement password;
 	@FindBy(id="password-confirmation")
 	public WebElement cpassword;
-	@FindBy(id="send2")
+	@FindBy(xpath="(//button[@id='send2'])[1]")
 	public WebElement createAccount;
-	
+	@FindBy(xpath="//div[text()='Thank you for registering with Khelmart Enterprises.']")
+	public WebElement getVerification;
 }
