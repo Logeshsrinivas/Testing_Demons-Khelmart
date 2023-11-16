@@ -5,19 +5,22 @@ import org.openqa.selenium.support.FindBy;
 
 public class RegisterLocators {
 	@FindBy(xpath="//div[@class='account-wrapper']")
-	WebElement registerlink;
-	@FindBy(xpath="(//a[text()='Start Here.'])[2]")
-	WebElement newCustomer;
+	public WebElement account;
+	@FindBy(xpath="//a[text()=' My account']")
+	public WebElement myAccount;
+	@FindBy(xpath="//div[@class='block block-new-customer']/div/div/div/a[@class='action create primary']")
+	public WebElement newCustomer;
 	@FindBy(id="firstname")
-	WebElement firstname;
+	public WebElement firstname;
 	@FindBy(id="lastname")
-	WebElement lastname;
+	public WebElement lastname;
 	@FindBy(id="email_address")
-	WebElement email;
+	public WebElement email;
 	@FindBy(id="password")
-	WebElement password;
+	public WebElement password;
 	@FindBy(id="password-confirmation")
-	WebElement cpassword;
+	public WebElement cpassword;
 	@FindBy(id="send2")
-	WebElement createAccount;
+	public WebElement createAccount;
+	
 }
