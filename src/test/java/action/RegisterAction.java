@@ -24,10 +24,11 @@ public class RegisterAction {
 	public void clickNewCustomer()  {
 //		HelperClass.getDriver().switchTo().frame(0);
 //		
-//		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(regl.newCustomer));
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(regl.newCustomer));
 //		Actions act = new Actions(HelperClass.getDriver());
 //		act.moveToElement(regl.newCustomer).click().build().perform();
-		regl.newCustomer.click();
+		HelperClass.jse.executeScript("arguments[0].click()", regl.newCustomer);
+//		regl.newCustomer.click();
 	}
 	public void setFirstrname(String firstname) {
 		regl.firstname.sendKeys(firstname);
@@ -45,7 +46,11 @@ public class RegisterAction {
 		regl.cpassword.sendKeys(cPassword);
 	}
 	public void clickCreateAccount() {
-		regl.createAccount.click();
+		HelperClass.jse.executeScript("arguments[0].click()", regl.createAccount);
+		
+	}
+	public String getVerifyText() {
+		return regl.getVerification.getText();
 	}
 	
 	public void NewAccount(String fristname, String lastname, String email, String password, String cPassword) {
@@ -56,11 +61,10 @@ public class RegisterAction {
 		setPassword(password);
 		setCPassword(cPassword);
 	}
-	public void Click() throws InterruptedException {
+	public void Click() {
 		clickAccount();
 		clickMyccount();
-		Thread.sleep(5000);
-		clickCreateAccount();
+		clickNewCustomer();
 		
 	}
 }
