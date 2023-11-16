@@ -12,6 +12,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import stepDefinition.RegisterDefinition;
 
@@ -22,6 +23,7 @@ public class HelperClass {
 	public static Logger log = null;
 	public static WebDriverWait wait =null;
 	public static final int TIMEOUT = 10;
+	Actions actions = new Actions(driver);
 	
 	  HelperClass(String browser) {
 		if(browser.equalsIgnoreCase("chrome")) {

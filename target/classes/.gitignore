@@ -1,2 +1,7 @@
+/META-INF/
 /Properties/
 /Features/
+/extend.properties
+/log4j2.properties
+/searchData.properties
+/extent.properties
