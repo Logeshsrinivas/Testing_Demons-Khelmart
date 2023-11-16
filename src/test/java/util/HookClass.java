@@ -10,7 +10,7 @@ public class HookClass {
 	
 	@Before
 	public void start() {
-		HelperClass.setUpDriver("Chrome");
+		HelperClass.setUpDriver("Edge");
 	}
 	@After
 	public void close(Scenario scenario) {
