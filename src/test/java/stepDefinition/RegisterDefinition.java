@@ -26,7 +26,7 @@ public class RegisterDefinition {
 	@When("User should enter username,lastname,email,password,confirm-password")
 	public void user_should_enter_username_lastname_email_password_confirm_password() {
 	
-	   regac.NewAccount("log","sri", "logr5@gmail.com", "123456789", "123456789");
+	   regac.NewAccount("roc","tail", "rockytailor@gmail.com", "123456789", "123456789");
 		HelperClass.log.info("Manditory Data passed");
 
 	}

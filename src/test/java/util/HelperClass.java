@@ -23,13 +23,13 @@ public class HelperClass {
 	public static WebDriverWait wait =null;
 	public static final int TIMEOUT = 10;
 	
-	  HelperClass(String browser) {
+	  HelperClass(String browser){
 		if(browser.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
 			driver = new ChromeDriver(options);
 		}else if(browser.equalsIgnoreCase("edge")) {
 			EdgeOptions options = new EdgeOptions();
-			driver = new EdgeDriver();
+			driver = new EdgeDriver(options);
 		}else if(browser.equalsIgnoreCase("firefox")) {
 			FirefoxOptions options = new FirefoxOptions();
 			driver= new FirefoxDriver(options);
@@ -50,7 +50,7 @@ public class HelperClass {
 	public static void setUpDriver(String browser) {
 		if(helperClass==null) {
 			helperClass=new HelperClass(browser);
-			log.info("Driver setUP Successfully");
+			log.info("Driver setUp Successfully");
 		}
 	}
 	public static void tearDown() {
