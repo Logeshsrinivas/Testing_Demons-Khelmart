@@ -1,5 +1,4 @@
-/util/
-/stepDefinition/
-/locators/
 /action/
-/runner/
+/locators/
+/stepDefinition/
+/util/

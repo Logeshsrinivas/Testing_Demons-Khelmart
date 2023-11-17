@@ -8,4 +8,6 @@ public class SubscriptionLocators {
 	@FindBy(xpath="//a[@class='logo']") public WebElement homepage;
 	@FindBy(xpath="//input[@id='newsletter']") public WebElement emailAddress;
 	@FindBy(xpath="//button[@class='action subscribe primary']") public WebElement subscribe;
+	@FindBy(xpath="//div[@data-ui-id='message-success']") public WebElement subscribeMessage;
+
 }

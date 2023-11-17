@@ -10,6 +10,8 @@ public class Utilityclass {
 
 	public String givingData;
 	public String Webpage;
+	public String subEmail;
+
 	
 	public Utilityclass() {
 		data();
@@ -33,6 +35,7 @@ public class Utilityclass {
 		
 		givingData = prop.getProperty("searchThing");
 		Webpage = prop.getProperty("URL");
+		subEmail = prop.getProperty("Email");
 }
 }
 
