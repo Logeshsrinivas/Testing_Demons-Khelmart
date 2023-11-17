@@ -12,6 +12,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import stepDefinition.RegisterDefinition;
 
@@ -20,6 +21,7 @@ public class HelperClass {
 	public static JavascriptExecutor jse;
 	public static WebDriver driver =null;
 	public static Logger log = null;
+	public static Actions action=null;
 	public static WebDriverWait wait =null;
 	public static final int TIMEOUT = 10;
 	
@@ -34,6 +36,7 @@ public class HelperClass {
 			FirefoxOptions options = new FirefoxOptions();
 			driver= new FirefoxDriver(options);
 		}
+		action = new Actions(driver);
 		jse = (JavascriptExecutor)driver;
 		log = LogManager.getLogger(RegisterDefinition.class);
 		wait= new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
