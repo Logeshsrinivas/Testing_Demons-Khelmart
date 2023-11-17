@@ -1,10 +1,11 @@
-package util;
+package stepDefinition;
 
 
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import util.HelperClass;
 
 public class HookClass {
 	
