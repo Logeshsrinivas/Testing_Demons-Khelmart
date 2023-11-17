@@ -18,7 +18,7 @@ package locators;
 		public WebElement signout;
 		@FindBy(xpath="//p[@class='title']")
 		public WebElement loginverify;
-		@FindBy(xpath ="//*[@id=\"maincontent\"]/div[2]/div[2]/div/div")
+		@FindBy(xpath ="(//div[@class='messages'])[1]")
 		public WebElement invalidlogin;
 	
 		

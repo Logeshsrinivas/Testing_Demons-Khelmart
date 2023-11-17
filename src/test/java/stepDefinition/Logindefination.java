@@ -58,45 +58,45 @@ import util.HelperClass;
 
 		@Then("User clicks the sign out should able to logout sucessfully")
 		public void user_clicks_the_sign_out_should_able_to_logout_sucessfully() throws InterruptedException {
-					
+			Thread.sleep(5000);		
 			objLogin.signout();
 		}
 
 		@When("the user clicks an my account option")
 		public void the_user_clicks_an_my_account_option() {
-//			objLogin.myAccount();
+		objLogin.myAccount();
 		}
 
 		@When("enters valiD email Address")
-		public void enters_vali_d_email_address(io.cucumber.datatable.DataTable dataTable) {
-//		   System.out.println("user enter email");
+//		public void enters_vali_d_email_address(io.cucumber.datatable.DataTable dataTable) {
+//	   System.out.println("user enter email");
 //		  List<Map<String,String>> signupForm =dataTable.asMaps(String.class,String.class);
-//			for(Map<String,String>form:signupForm) {
+//    	for(Map<String,String>form:signupForm) {
 //				String email =form.get("email");
-//				HelperClass.driver.findElement(By.name("'login[username")).sendKeys(email);
-//			}
-		}
+//			HelperClass.driver.findElement(By.name("'login[username")).sendKeys(email);
+//		}
+		//}
 		
 
 		@When("User gives the invalid password")
 		public void user_gives_the_invalid_password(io.cucumber.datatable.DataTable dataTable) {
-//			System.out.println("user enter password");
-//			  List<Map<String,String>> signupForm =dataTable.asMaps(String.class,String.class);
-//				for(Map<String,String>form:signupForm) {
-//					String password =form.get("password");
-//					HelperClass.driver.findElement(By.name("'login[password")).sendKeys(password);
-//				}
+		System.out.println("user enter password");
+		  List<Map<String,String>> signupForm =dataTable.asMaps(String.class,String.class);
+		for(Map<String,String>form:signupForm) {
+				String password =form.get("password");
+				HelperClass.driver.findElement(By.name("'login[password")).sendKeys(password);
+			}
 		}
 
 		@When("User clicks the sign in button")
 		public void user_clicks_the_sign_in_button() {
-//			objLogin.clicksignin();
+		objLogin.clicksignin();
 		}
 
 		@Then("User not able to login and an error message should be show")
 		public void user_not_able_to_login_and_an_error_message_should_be_show() {
-//			Assert.assertTrue(objLogin.getVerifyErrorText().contains("The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later."));
-//			   System.out.println("unsucessfull login");
+			Assert.assertTrue(objLogin.getVerifyErrorText().contains("The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later."));
+			   System.out.println("unsucessfull login");
 		}
 	}
 

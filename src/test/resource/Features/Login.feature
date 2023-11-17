@@ -11,16 +11,16 @@ Feature: Logging to the khelmart page
     And  User should able to login in khelmart application sucessfully
     Then  User clicks the sign out should able to logout sucessfully
 
-  #@invalidcredentials
-  #Scenario: Login using invalid credentials
-      #When  the user clicks an my account option
-      #And  enters valiD email Address
-      #|email                | 
-      #| kavyabj76@gmail.com |
-      #And   User gives the invalid password
-      #|password             |
-      #|kavya@321            |
-      #And User clicks the sign in button
-      #Then   User not able to login and an error message should be show
+  @invalidcredentials
+  Scenario: Login using invalid credentials
+      When  the user clicks an my account option
+      And  enters valiD email Address
+      |email                | 
+      | kavyabj76@gmail.com |
+      And   User gives the invalid password
+      |password             |
+      |kavya@321            |
+      And User clicks the sign in button
+      Then   User not able to login and an error message should be show
    
     
